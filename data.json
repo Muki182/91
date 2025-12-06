@@ -1,0 +1,498 @@
+{
+  "bookings": [],
+  "staff": [
+    {
+      "id": 1,
+      "name": "林佳铭",
+      "rank": "#1",
+      "age": 28,
+      "height": "183cm",
+      "weight": "72kg",
+      "status": "partial",
+      "description": "首席服务师，接受高级定制需求。精通各种技巧，经验丰富，客户满意度最高。",
+      "tags": [
+        "首席服务师",
+        "高级定制",
+        "专家级技巧",
+        "深度交流",
+        "场景定制"
+      ],
+      "stats": {
+        "experience": "5年",
+        "rating": "4.9",
+        "clients": "280+"
+      },
+      "priceMultiplier": 1.5
+    },
+    {
+      "id": 2,
+      "name": "陈逸飞",
+      "rank": "#2",
+      "age": 25,
+      "height": "178cm",
+      "weight": "68kg",
+      "status": "available",
+      "description": "擅长舒缓按摩与基础服务，耐心细致，适合初次体验者。",
+      "tags": [
+        "舒缓按摩",
+        "基础服务",
+        "新人友好",
+        "耐心细致"
+      ],
+      "stats": {
+        "experience": "3年",
+        "rating": "4.7",
+        "clients": "150+"
+      },
+      "priceMultiplier": 1
+    },
+    {
+      "id": 3,
+      "name": "吴俊辉",
+      "rank": "#3",
+      "age": 32,
+      "height": "185cm",
+      "weight": "80kg",
+      "status": "busy",
+      "description": "BDSM引导专家，力量控制精准，适合寻求特殊体验的客户。",
+      "tags": [
+        "BDSM引导",
+        "力量控制",
+        "特殊体验",
+        "专业道具"
+      ],
+      "stats": {
+        "experience": "6年",
+        "rating": "4.8",
+        "clients": "200+"
+      },
+      "priceMultiplier": 1.3
+    },
+    {
+      "id": 4,
+      "name": "张浩宇",
+      "rank": "#4",
+      "age": 26,
+      "height": "175cm",
+      "weight": "65kg",
+      "status": "available",
+      "description": "提供快速高效服务，晨间唤醒服务专家。",
+      "tags": [
+        "快速服务",
+        "晨间唤醒",
+        "高效",
+        "时间灵活"
+      ],
+      "stats": {
+        "experience": "2年",
+        "rating": "4.6",
+        "clients": "120+"
+      },
+      "priceMultiplier": 1
+    },
+    {
+      "id": 5,
+      "name": "周逸辰",
+      "rank": "#5",
+      "age": 26,
+      "height": "180cm",
+      "weight": "68kg",
+      "status": "available",
+      "description": "声音极具杀伤力，新人首选，配合度100%。",
+      "tags": [
+        "温柔受",
+        "撒娇叫床",
+        "超紧后庭",
+        "声音优美"
+      ],
+      "stats": {
+        "experience": "3年",
+        "rating": "4.7",
+        "clients": "160+"
+      },
+      "priceMultiplier": 1.2
+    },
+    {
+      "id": 6,
+      "name": "顾霆琛",
+      "rank": "#6",
+      "age": 28,
+      "height": "187cm",
+      "weight": "85kg",
+      "status": "busy",
+      "description": "健身教练出身，全身肌肉，暴力输出型。",
+      "tags": [
+        "纯攻",
+        "暴力输出",
+        "举高高",
+        "肌肉型"
+      ],
+      "stats": {
+        "experience": "4年",
+        "rating": "4.8",
+        "clients": "180+"
+      },
+      "priceMultiplier": 1.4
+    },
+    {
+      "id": 7,
+      "name": "王哲远",
+      "rank": "#7",
+      "age": 30,
+      "height": "182cm",
+      "weight": "75kg",
+      "status": "busy",
+      "description": "双人协同服务专家，团队配合默契。",
+      "tags": [
+        "双人协同",
+        "团队配合",
+        "默契",
+        "组合服务"
+      ],
+      "stats": {
+        "experience": "5年",
+        "rating": "4.9",
+        "clients": "220+"
+      },
+      "priceMultiplier": 1.3
+    },
+    {
+      "id": 8,
+      "name": "刘子轩",
+      "rank": "#8",
+      "age": 24,
+      "height": "178cm",
+      "weight": "67kg",
+      "status": "available",
+      "description": "角色扮演专家，情境定制能力强。",
+      "tags": [
+        "角色扮演",
+        "情境定制",
+        "创意",
+        "场景丰富"
+      ],
+      "stats": {
+        "experience": "2年",
+        "rating": "4.5",
+        "clients": "100+"
+      },
+      "priceMultiplier": 1.1
+    },
+    {
+      "id": 9,
+      "name": "徐天佑",
+      "rank": "#9",
+      "age": 29,
+      "height": "180cm",
+      "weight": "73kg",
+      "status": "partial",
+      "description": "陪伴服务专家，旅行陪同经验丰富。",
+      "tags": [
+        "陪伴服务",
+        "旅行陪同",
+        "全天候",
+        "贴心"
+      ],
+      "stats": {
+        "experience": "4年",
+        "rating": "4.7",
+        "clients": "170+"
+      },
+      "priceMultiplier": 1.3
+    },
+    {
+      "id": 10,
+      "name": "郑文博",
+      "rank": "#10",
+      "age": 27,
+      "height": "179cm",
+      "weight": "70kg",
+      "status": "available",
+      "description": "训练指导专家，技巧教学耐心细致。",
+      "tags": [
+        "训练指导",
+        "技巧教学",
+        "耐心",
+        "专业指导"
+      ],
+      "stats": {
+        "experience": "3年",
+        "rating": "4.6",
+        "clients": "130+"
+      },
+      "priceMultiplier": 1.2
+    },
+    {
+      "id": 11,
+      "name": "黄俊杰",
+      "rank": "#11",
+      "age": 31,
+      "height": "184cm",
+      "weight": "78kg",
+      "status": "available",
+      "description": "特殊环境服务专家，户外体验丰富。",
+      "tags": [
+        "特殊环境",
+        "户外体验",
+        "冒险",
+        "刺激"
+      ],
+      "stats": {
+        "experience": "5年",
+        "rating": "4.8",
+        "clients": "190+"
+      },
+      "priceMultiplier": 1.4
+    },
+    {
+      "id": 12,
+      "name": "周浩然",
+      "rank": "#12",
+      "age": 23,
+      "height": "176cm",
+      "weight": "65kg",
+      "status": "available",
+      "description": "新人引导专家，基础体验耐心引导。",
+      "tags": [
+        "新人引导",
+        "基础体验",
+        "耐心",
+        "首次友好"
+      ],
+      "stats": {
+        "experience": "1年",
+        "rating": "4.4",
+        "clients": "80+"
+      },
+      "priceMultiplier": 1
+    },
+    {
+      "id": 13,
+      "name": "沈泽宇",
+      "rank": "#13",
+      "age": 33,
+      "height": "186cm",
+      "weight": "82kg",
+      "status": "partial",
+      "description": "高端定制专家，全包服务体验。",
+      "tags": [
+        "高端定制",
+        "全包服务",
+        "奢华",
+        "私人订制"
+      ],
+      "stats": {
+        "experience": "7年",
+        "rating": "4.9",
+        "clients": "250+"
+      },
+      "priceMultiplier": 2
+    },
+    {
+      "id": 14,
+      "name": "杨宇航",
+      "rank": "#14",
+      "age": 26,
+      "height": "177cm",
+      "weight": "69kg",
+      "status": "available",
+      "description": "快速释放专家，紧急服务响应快。",
+      "tags": [
+        "快速释放",
+        "紧急服务",
+        "高效",
+        "及时"
+      ],
+      "stats": {
+        "experience": "2年",
+        "rating": "4.5",
+        "clients": "110+"
+      },
+      "priceMultiplier": 1
+    },
+    {
+      "id": 15,
+      "name": "温予",
+      "rank": "#15",
+      "age": 23,
+      "height": "177cm",
+      "weight": "60kg",
+      "status": "available",
+      "description": "软萌弟弟型，超级会撒娇，适合温柔宠爱。",
+      "tags": [
+        "软萌",
+        "撒娇",
+        "温柔宠爱",
+        "弟弟型"
+      ],
+      "stats": {
+        "experience": "1年",
+        "rating": "4.3",
+        "clients": "70+"
+      },
+      "priceMultiplier": 1.1
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "标准口交服务",
+      "basePrice": 120,
+      "duration": "30分钟",
+      "category": "基础",
+      "description": "专业口交服务，专注刺激，确保满意效果。"
+    },
+    {
+      "id": 2,
+      "name": "深度亲密服务",
+      "basePrice": 250,
+      "duration": "1小时",
+      "category": "基础",
+      "description": "全面身体接触与深入交流，根据偏好调整节奏。"
+    },
+    {
+      "id": 3,
+      "name": "全身舒缓与刺激",
+      "basePrice": 180,
+      "duration": "1小时",
+      "category": "基础",
+      "description": "结合按摩与针对性刺激，放松与高强度体验结合。"
+    },
+    {
+      "id": 4,
+      "name": "双人专业协同",
+      "basePrice": 400,
+      "duration": "1.5小时",
+      "category": "高级",
+      "description": "两位专业人员同步服务，多层次刺激体验。"
+    },
+    {
+      "id": 5,
+      "name": "BDSM引导体验",
+      "basePrice": 300,
+      "duration": "1.5小时",
+      "category": "高级",
+      "description": "专业BDSM引导，安全控制，特殊体验。"
+    },
+    {
+      "id": 6,
+      "name": "全夜陪伴服务",
+      "basePrice": 800,
+      "duration": "整夜",
+      "category": "高级",
+      "description": "整夜陪伴，多次互动，完整关系体验。"
+    },
+    {
+      "id": 7,
+      "name": "角色情境定制",
+      "basePrice": 200,
+      "duration": "1小时",
+      "category": "定制",
+      "description": "完全定制化场景与角色，沉浸式体验。"
+    },
+    {
+      "id": 8,
+      "name": "特殊环境体验",
+      "basePrice": 350,
+      "duration": "1小时",
+      "category": "定制",
+      "description": "非标准场所服务，冒险刺激体验。"
+    },
+    {
+      "id": 9,
+      "name": "视频录制参与",
+      "basePrice": 500,
+      "duration": "按需",
+      "category": "定制",
+      "description": "专业视频录制，高清设备，隐私保护。"
+    },
+    {
+      "id": 10,
+      "name": "快速释放服务",
+      "basePrice": 80,
+      "duration": "15分钟",
+      "category": "补充",
+      "description": "简洁高效，快速满足需求。"
+    },
+    {
+      "id": 11,
+      "name": "适应性训练指导",
+      "basePrice": 220,
+      "duration": "1小时",
+      "category": "补充",
+      "description": "渐进式训练，提升适应能力。"
+    },
+    {
+      "id": 12,
+      "name": "多人社交体验",
+      "basePrice": 600,
+      "duration": "3小时",
+      "category": "补充",
+      "description": "小型同好社交活动，群体互动体验。"
+    },
+    {
+      "id": 13,
+      "name": "旅行陪伴方案",
+      "basePrice": 1000,
+      "duration": "全天",
+      "category": "补充",
+      "description": "全天候差旅陪伴，结合行程安排。"
+    },
+    {
+      "id": 14,
+      "name": "林佳铭·旗舰体验",
+      "basePrice": 28800,
+      "duration": "12小时",
+      "category": "专属",
+      "description": "首席服务师全时段专属服务，极致体验。"
+    },
+    {
+      "id": 15,
+      "name": "深喉专业服务",
+      "basePrice": 1380,
+      "duration": "45分钟",
+      "category": "专属",
+      "description": "专业深喉技巧，极致刺激体验。"
+    },
+    {
+      "id": 16,
+      "name": "晨间唤醒服务",
+      "basePrice": 100,
+      "duration": "30分钟",
+      "category": "补充",
+      "description": "清晨专属服务，美好一天开始。"
+    },
+    {
+      "id": 17,
+      "name": "前列腺按摩专享",
+      "basePrice": 150,
+      "duration": "45分钟",
+      "category": "高级",
+      "description": "专业前列腺按摩，强烈高潮体验。"
+    },
+    {
+      "id": 18,
+      "name": "性教育指导",
+      "basePrice": 120,
+      "duration": "1小时",
+      "category": "补充",
+      "description": "专业技巧教学，提升体验质量。"
+    },
+    {
+      "id": 19,
+      "name": "耐力挑战赛",
+      "basePrice": 320,
+      "duration": "1.5小时",
+      "category": "高级",
+      "description": "性耐力测试，高强度挑战体验。"
+    },
+    {
+      "id": 20,
+      "name": "复古风格服务",
+      "basePrice": 180,
+      "duration": "1小时",
+      "category": "定制",
+      "description": "怀旧风格体验，复古情趣。"
+    }
+  ]
+}

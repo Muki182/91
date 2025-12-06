@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>2025 男男性服务全档案｜豪华完整版</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="专业男男性服务预约系统，提供全方位服务体验">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+    :root {
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --secondary: #7c3aed;
+        --accent: #f59e0b;
+        --light: #f8fafc;
+        --dark: #0f172a;
+        --gray-50: #f9fafb;
+        --gray-100: #f3f4f6;
+        --gray-200: #e5e7eb;
+        --gray-800: #1f2937;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        --card-shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', 'Noto Sans SC', sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #334155;
+        line-height: 1.6;
+        overflow-x: hidden;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 24px 80px;
+    }
+
+    /* 水印背景 */
+    .watermark-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.02) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.02) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    /* 头部样式 */
+    .header {
+        text-align: center;
+        padding: 60px 0 40px;
+        position: relative;
+    }
+
+    .header::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        border-radius: 2px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+        color: #64748b;
+        font-weight: 400;
+        max-width: 600px;
+        margin: 0 auto 24px;
+    }
+
+    /* 统计卡片 */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 24px;
+        margin: 48px 0;
+    }
+
+    .stat-card {
+        background: white;
+        border-radius: 16px;
+        padding: 32px 24px;
+        text-align: center;
+        box-shadow: var(--card-shadow);
+        border: 1px solid var(--gray-100);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .stat-card:hover::before {
+        left: 100%;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--card-shadow-hover);
+        border-color: var(--primary);
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 8px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+        color: #64748b;
+        font-weight: 500;
+    }
+
+    /* 选项卡 */
+    .tabs-container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: var(--card-shadow);
+        margin-bottom: 48px;
+        overflow: hidden;
+        border: 1px solid var(--gray-200);
+    }
+
+    .tabs-header {
+        display: flex;
+        background: linear-gradient(90deg, var(--gray-50), white);
+        border-bottom: 1px solid var(--gray-200);
+        padding: 8px;
+    }
+
+    .tab-btn {
+        flex: 1;
+        padding: 20px 24px;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #64748b;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        border-radius: 12px;
+        margin: 0 4px;
+    }
+
+    .tab-btn:hover {
+        background: var(--gray-100);
+        color: var(--primary);
+    }
+
+    .tab-btn.active {
+        background: white;
+        color: var(--primary);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+    }
+
+    .tab-content {
+        display: none;
+        padding: 32px;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    /* 搜索框 */
+    .search-container {
+        margin-bottom: 32px;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 1rem;
+        border: 2px solid var(--gray-200);
+        border-radius: 12px;
+        background: white;
+        transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    /* 卡片网格 */
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 24px;
+    }
+
+    /* 人员卡片 */
+    .staff-card {
+        background: white;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: var(--card-shadow);
+        border: 1px solid var(--gray-100);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .staff-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .staff-card:hover::before {
+        left: 100%;
+    }
+
+    .staff-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--card-shadow-hover);
+        border-color: var(--primary);
+    }
+
+    .staff-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 16px;
+    }
+
+    .staff-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark);
+    }
+
+    .staff-rank {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+
+    .staff-info {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+        color: #64748b;
+        font-size: 0.875rem;
+    }
+
+    .staff-description {
+        color: #475569;
+        margin-bottom: 16px;
+        line-height: 1.5;
+    }
+
+    .staff-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .tag {
+        background: var(--gray-100);
+        color: var(--gray-800);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    .tag.primary {
+        background: var(--primary);
+        color: white;
+    }
+
+    .staff-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-size: 0.875rem;
+        color: #64748b;
+    }
+
+    .staff-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .status-available {
+        background: rgba(16, 185, 129, 0.1);
+        color: var(--success);
+    }
+
+    .status-busy {
+        background: rgba(239, 68, 68, 0.1);
+        color: var(--danger);
+    }
+
+    .status-partial {
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--warning);
+    }
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+
+    .status-available .status-dot {
+        background: var(--success);
+    }
+
+    .status-busy .status-dot {
+        background: var(--danger);
+    }
+
+    .status-partial .status-dot {
+        background: var(--warning);
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-secondary {
+        background: var(--gray-100);
+        color: var(--gray-800);
+    }
+
+    .btn-secondary:hover {
+        background: var(--gray-200);
+    }
+
+    .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none !important;
+    }
+
+    /* 服务项目卡片 */
+    .price-card {
+        background: white;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: var(--card-shadow);
+        border: 1px solid var(--gray-100);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .price-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.05), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .price-card:hover::before {
+        left: 100%;
+    }
+
+    .price-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--card-shadow-hover);
+        border-color: var(--secondary);
+    }
+
+    .price-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 16px;
+    }
+
+    .price-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--dark);
+    }
+
+    .price-amount {
+        font-size: 1.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--secondary), var(--primary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .price-duration {
+        color: #64748b;
+        font-size: 0.875rem;
+        margin-bottom: 12px;
+    }
+
+    .price-description {
+        color: #475569;
+        margin-bottom: 16px;
+        line-height: 1.5;
+    }
+
+    .price-category {
+        display: inline-block;
+        background: var(--gray-100);
+        color: var(--gray-800);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+
+    /* 模态框 */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    .modal-overlay.active {
+        display: flex;
+    }
+
+    .modal {
+        background: white;
+        border-radius: 20px;
+        max-width: 500px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px;
+        border-bottom: 1px solid var(--gray-200);
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark);
+    }
+
+    .modal-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #64748b;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .modal-close:hover {
+        background: var(--gray-100);
+        color: var(--danger);
+    }
+
+    .modal-body {
+        padding: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--dark);
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid var(--gray-200);
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 12px center;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        padding-right: 40px;
+    }
+
+    .form-textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    .estimated-price {
+        background: var(--gray-50);
+        padding: 16px;
+        border-radius: 8px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .estimated-price-label {
+        font-size: 0.875rem;
+        color: #64748b;
+        margin-bottom: 4px;
+    }
+
+    .estimated-price-amount {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--primary);
+    }
+
+    .form-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .form-actions .btn {
+        flex: 1;
+    }
+
+    /* 通知 */
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 16px 24px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        z-index: 1001;
+        display: none;
+        max-width: 400px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .notification.success {
+        background: var(--success);
+    }
+
+    .notification.error {
+        background: var(--danger);
+    }
+
+    .notification.info {
+        background: var(--primary);
+    }
+
+    /* 预约记录 */
+    .booking-item {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 16px;
+        box-shadow: var(--card-shadow);
+        border: 1px solid var(--gray-100);
+    }
+
+    .booking-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 12px;
+    }
+
+    .booking-id {
+        font-weight: 600;
+        color: var(--dark);
+    }
+
+    .booking-status {
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .booking-status.pending {
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--warning);
+    }
+
+    .booking-status.confirmed {
+        background: rgba(16, 185, 129, 0.1);
+        color: var(--success);
+    }
+
+    .booking-status.cancelled {
+        background: rgba(239, 68, 68, 0.1);
+        color: var(--danger);
+    }
+
+    .booking-details {
+        color: #64748b;
+        font-size: 0.875rem;
+        margin-bottom: 12px;
+    }
+
+    .booking-actions {
+        display: flex;
+        gap: 8px;
+    }
+
+    .booking-actions .btn {
+        font-size: 0.75rem;
+        padding: 8px 16px;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 16px 60px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        .stats-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        
+        .tabs-header {
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .tab-btn {
+            padding: 16px;
+        }
+        
+        .cards-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        
+        .staff-header, .price-header {
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .staff-info {
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-actions {
+            flex-direction: column;
+        }
+        
+        .modal {
+            margin: 20px;
+            max-height: calc(100vh - 40px);
+        }
+    }
+
+    /* 加载动画 */
+    .loading {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+    <div class="watermark-bg"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>2025 男男性服务全档案</h1>
+            <p class="subtitle">豪华完整版 - 专业服务人员与预约管理系统</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="staffCount">15</div>
+                    <div class="stat-label">专业服务人员</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="serviceCount">20</div>
+                    <div class="stat-label">服务项目</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="availableCount">12</div>
+                    <div class="stat-label">可预约人员</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="bookingCount">0</div>
+                    <div class="stat-label">我的预约</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab('staff', event)">
+                    <i class="ti ti-users"></i> 人员档案
+                </button>
+                <button class="tab-btn" onclick="openTab('services', event)">
+                    <i class="ti ti-list"></i> 服务项目
+                </button>
+                <button class="tab-btn" onclick="openTab('bookings', event)">
+                    <i class="ti ti-calendar"></i> 我的预约
+                </button>
+            </div>
+
+            <!-- 人员档案选项卡 -->
+            <div class="tab-content active" id="staff">
+                <div class="search-container">
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索服务人员...">
+                </div>
+                <div class="cards-grid" id="staffGrid">
+                    <!-- 人员卡片将通过JavaScript动态生成 -->
+                </div>
+            </div>
+
+            <!-- 服务项目选项卡 -->
+            <div class="tab-content" id="services">
+                <div class="search-container">
+                    <input type="text" class="search-input" id="servicesSearchInput" placeholder="搜索服务项目...">
+                </div>
+                <div class="cards-grid" id="servicesGrid">
+                    <!-- 服务项目卡片将通过JavaScript动态生成 -->
+                </div>
+            </div>
+
+            <!-- 我的预约选项卡 -->
+            <div class="tab-content" id="bookings">
+                <div style="text-align: center; padding: 40px;" id="bookingsContent">
+                    <p style="color: #64748b; margin-bottom: 20px;">您还没有任何预约记录</p>
+                    <button class="btn btn-primary" onclick="openTab('staff')">
+                        <i class="ti ti-calendar-plus"></i> 立即预约
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 预约模态框 -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">预约服务</h2>
+                <button class="modal-close" id="modalClose" onclick="closeBookingModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label class="form-label">选择服务</label>
+                        <select class="form-control form-select" id="serviceSelect" required>
+                            <option value="">请选择服务项目</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">选择服务人员</label>
+                        <select class="form-control form-select" id="staffSelect" required>
+                            <option value="">请选择服务人员</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">预约日期</label>
+                        <input type="date" class="form-control" id="bookingDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">预约时间</label>
+                        <input type="time" class="form-control" id="bookingTime" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">服务时长</label>
+                        <select class="form-control form-select" id="durationSelect" required>
+                            <option value="">请选择时长</option>
+                            <option value="1">1小时</option>
+                            <option value="2">2小时</option>
+                            <option value="3">3小时</option>
+                            <option value="4">4小时</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">您的称呼</label>
+                        <input type="text" class="form-control" id="customerName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">联系方式</label>
+                        <input type="tel" class="form-control" id="customerPhone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">特殊需求（可选）</label>
+                        <textarea class="form-control form-textarea" id="specialRequirements" placeholder="请描述您的特殊需求..."></textarea>
+                    </div>
+                    
+                    <div class="estimated-price">
+                        <div class="estimated-price-label">预计费用</div>
+                        <div class="estimated-price-amount" id="estimatedPrice">¥0</div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn" onclick="closeBookingModal()">取消</button>
+                        <button type="submit" class="btn btn-primary">
+                            <span id="submitBtnText">提交预约</span>
+                            <span class="loading" id="submitLoading" style="display: none;"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 通知 -->
+    <div class="notification" id="notification"></div>
+
+    <script>
+        // 服务人员数据
+        const staffData = [
+            {
+                id: 1,
+                name: "林佳铭",
+                rank: "#1",
+                age: 28,
+                height: "183cm",
+                weight: "72kg",
+                status: "partial",
+                description: "首席服务师，接受高级定制需求。精通各种技巧，经验丰富，客户满意度最高。",
+                tags: ["首席服务师", "高级定制", "专家级技巧", "深度交流", "场景定制"],
+                stats: { experience: "5年", rating: "4.9", clients: "280+" },
+                priceMultiplier: 1.5
+            },
+            {
+                id: 2,
+                name: "陈逸飞",
+                rank: "#2",
+                age: 25,
+                height: "178cm",
+                weight: "68kg",
+                status: "available",
+                description: "擅长舒缓按摩与基础服务，耐心细致，适合初次体验者。",
+                tags: ["舒缓按摩", "基础服务", "新人友好", "耐心细致"],
+                stats: { experience: "3年", rating: "4.7", clients: "150+" },
+                priceMultiplier: 1.0
+            },
+            {
+                id: 3,
+                name: "张云轩",
+                rank: "#3",
+                age: 26,
+                height: "180cm",
+                weight: "70kg",
+                status: "available",
+                description: "力量型服务师，擅长高强度运动和力量训练相关服务。",
+                tags: ["力量型", "运动健身", "高强度", "肌肉按摩"],
+                stats: { experience: "4年", rating: "4.8", clients: "200+" },
+                priceMultiplier: 1.2
+            },
+            {
+                id: 4,
+                name: "王浩然",
+                rank: "#4",
+                age: 24,
+                height: "175cm",
+                weight: "65kg",
+                status: "busy",
+                description: "温柔体贴型服务师，擅长情感交流和深度陪伴服务。",
+                tags: ["温柔体贴", "情感交流", "深度陪伴", "心理疏导"],
+                stats: { experience: "2年", rating: "4.6", clients: "120+" },
+                priceMultiplier: 0.9
+            },
+            {
+                id: 5,
+                name: "刘子墨",
+                rank: "#5",
+                age: 27,
+                height: "182cm",
+                weight: "74kg",
+                status: "available",
+                description: "全能型服务师，各项技能均衡发展，适合各种需求客户。",
+                tags: ["全能型", "均衡发展", "多面手", "适应性广"],
+                stats: { experience: "4年", rating: "4.7", clients: "180+" },
+                priceMultiplier: 1.1
+            }
+        ];
+
+        // 服务项目数据
+        const servicesData = [
+            {
+                id: 1,
+                name: "基础按摩服务",
+                price: 300,
+                duration: "60分钟",
+                description: "专业全身放松按摩，缓解肌肉疲劳，促进血液循环。",
+                category: "基础服务"
+            },
+            {
+                id: 2,
+                name: "深度舒缓按摩",
+                price: 500,
+                duration: "90分钟",
+                description: "针对深层肌肉的深度按摩，有效缓解长期疲劳和紧张。",
+                category: "高级服务"
+            },
+            {
+                id: 3,
+                name: "专业运动按摩",
+                price: 600,
+                duration: "90分钟",
+                description: "针对运动人群的专业按摩，预防运动损伤，促进恢复。",
+                category: "专业服务"
+            },
+            {
+                id: 4,
+                name: "情感陪伴服务",
+                price: 400,
+                duration: "120分钟",
+                description: "深度情感交流和陪伴，提供心理支持和情感慰藉。",
+                category: "情感服务"
+            },
+            {
+                id: 5,
+                name: "定制场景服务",
+                price: 800,
+                duration: "120分钟",
+                description: "根据客户需求定制专属场景和体验，满足个性化需求。",
+                category: "定制服务"
+            }
+        ];
+
+        // 初始化数据
+        function initData() {
+            // 初始化本地存储
+            if (!localStorage.getItem('serviceBookings')) {
+                localStorage.setItem('serviceBookings', JSON.stringify([]));
+            }
+            
+            // 更新统计信息
+            updateStats();
+            
+            // 渲染人员卡片
+            renderStaffCards();
+            
+            // 渲染服务项目卡片
+            renderServiceCards();
+            
+            // 初始化搜索
+            initSearch();
+            
+            // 更新预约数量
+            updateBookingCount();
+        }
+
+        // 更新统计信息
+        function updateStats() {
+            document.getElementById('staffCount').textContent = staffData.length;
+            document.getElementById('serviceCount').textContent = servicesData.length;
+            
+            const availableCount = staffData.filter(staff => staff.status === 'available').length;
+            document.getElementById('availableCount').textContent = availableCount;
+        }
+
+        // 渲染人员卡片
+        function renderStaffCards() {
+            const staffGrid = document.getElementById('staffGrid');
+            staffGrid.innerHTML = '';
+            
+            staffData.forEach(staff => {
+                const statusClass = `status-${staff.status}`;
+                const statusText = {
+                    'available': '可预约',
+                    'busy': '已满',
+                    'partial': '部分可约'
+                }[staff.status] || '未知';
+                
+                const card = document.createElement('div');
+                card.className = 'staff-card';
+                card.innerHTML = `
+                    <div class="staff-header">
+                        <div class="staff-name">${staff.name}</div>
+                        <div class="staff-rank">${staff.rank}</div>
+                    </div>
+                    <div class="staff-info">
+                        <span>${staff.age}岁</span>
+                        <span>${staff.height}</span>
+                        <span>${staff.weight}</span>
+                    </div>
+                    <div class="staff-description">${staff.description}</div>
+                    <div class="staff-tags">
+                        ${staff.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="staff-stats">
+                        <span>经验: ${staff.stats.experience}</span>
+                        <span>评分: ${staff.stats.rating}</span>
+                        <span>服务: ${staff.stats.clients}</span>
+                    </div>
+                    <div class="staff-status ${statusClass}">
+                        <span class="status-dot"></span>
+                        ${statusText}
+                    </div>
+                    <button class="btn btn-primary" onclick="openBookingModal(${staff.id})" ${staff.status === 'busy' ? 'disabled' : ''} style="margin-top: 16px; width: 100%;">
+                        <i class="ti ti-calendar-plus"></i> ${staff.status === 'busy' ? '已满' : '立即预约'}
+                    </button>
+                `;
+                staffGrid.appendChild(card);
+            });
+        }
+
+        // 渲染服务项目卡片
+        function renderServiceCards() {
+            const servicesGrid = document.getElementById('servicesGrid');
+            servicesGrid.innerHTML = '';
+            
+            servicesData.forEach(service => {
+                const card = document.createElement('div');
+                card.className = 'price-card';
+                card.innerHTML = `
+                    <div class="price-header">
+                        <div class="price-name">${service.name}</div>
+                        <div class="price-amount">¥${service.price}</div>
+                    </div>
+                    <div class="price-duration">${service.duration}</div>
+                    <div class="price-description">${service.description}</div>
+                    <div class="price-category">${service.category}</div>
+                    <button class="btn btn-primary" onclick="openServiceBookingModal(${service.id})" style="width: 100%;">
+                        <i class="ti ti-calendar-plus"></i> 立即预约
+                    </button>
+                `;
+                servicesGrid.appendChild(card);
+            });
+        }
+
+        // 初始化搜索功能
+        function initSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const servicesSearchInput = document.getElementById('servicesSearchInput');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                filterStaffCards(searchTerm);
+            });
+            
+            servicesSearchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                filterServiceCards(searchTerm);
+            });
+        }
+
+        // 筛选人员卡片
+        function filterStaffCards(searchTerm) {
+            const cards = document.querySelectorAll('.staff-card');
+            
+            cards.forEach(card => {
+                const staffName = card.querySelector('.staff-name').textContent.toLowerCase();
+                const staffDescription = card.querySelector('.staff-description').textContent.toLowerCase();
+                const staffTags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+                
+                const matches = staffName.includes(searchTerm) || 
+                               staffDescription.includes(searchTerm) ||
+                               staffTags.some(tag => tag.includes(searchTerm));
+                
+                card.style.display = matches ? '' : 'none';
+            });
+        }
+
+        // 筛选服务项目卡片
+        function filterServiceCards(searchTerm) {
+            const cards = document.querySelectorAll('.price-card');
+            
+            cards.forEach(card => {
+                const serviceName = card.querySelector('.price-name').textContent.toLowerCase();
+                const serviceDescription = card.querySelector('.price-description').textContent.toLowerCase();
+                const serviceCategory = card.querySelector('.price-category').textContent.toLowerCase();
+                
+                const matches = serviceName.includes(searchTerm) || 
+                               serviceDescription.includes(searchTerm) ||
+                               serviceCategory.includes(searchTerm);
+                
+                card.style.display = matches ? '' : 'none';
+            });
+        }
+
+        // 打开预约模态框（从人员入口）
+        function openBookingModal(staffId) {
+            const staff = staffData.find(s => s.id === staffId);
+            if (!staff || staff.status === 'busy') return;
+            
+            // 设置模态框标题
+            document.getElementById('modalTitle').textContent = `预约 ${staff.name} 的服务`;
+            
+            // 填充服务选择
+            const serviceSelect = document.getElementById('serviceSelect');
+            serviceSelect.innerHTML = '<option value="">请选择服务项目</option>';
+            servicesData.forEach(service => {
+                const option = document.createElement('option');
+                option.value = service.id;
+                option.textContent = `${service.name} - ¥${service.price}`;
+                serviceSelect.appendChild(option);
+            });
+            
+            // 设置默认人员选择
+            const staffSelect = document.getElementById('staffSelect');
+            staffSelect.innerHTML = '<option value="">请选择服务人员</option>';
+            const staffOption = document.createElement('option');
+            staffOption.value = staff.id;
+            staffOption.textContent = staff.name;
+            staffOption.selected = true;
+            staffSelect.appendChild(staffOption);
+            
+            // 显示模态框
+            document.getElementById('bookingModal').classList.add('active');
+            
+            // 绑定表单事件
+            bindFormEvents();
+        }
+
+        // 打开预约模态框（从服务入口）
+        function openServiceBookingModal(serviceId) {
+            const service = servicesData.find(s => s.id === serviceId);
+            if (!service) return;
+            
+            // 设置模态框标题
+            document.getElementById('modalTitle').textContent = `预约 ${service.name}`;
+            
+            // 设置默认服务选择
+            const serviceSelect = document.getElementById('serviceSelect');
+            serviceSelect.innerHTML = '<option value="">请选择服务项目</option>';
+            const serviceOption = document.createElement('option');
+            serviceOption.value = service.id;
+            serviceOption.textContent = `${service.name} - ¥${service.price}`;
+            serviceOption.selected = true;
+            serviceSelect.appendChild(serviceOption);
+            
+            // 填充人员选择
+            const staffSelect = document.getElementById('staffSelect');
+            staffSelect.innerHTML = '<option value="">请选择服务人员</option>';
+            staffData.forEach(staff => {
+                if (staff.status !== 'busy') {
+                    const option = document.createElement('option');
+                    option.value = staff.id;
+                    option.textContent = staff.name;
+                    staffSelect.appendChild(option);
+                }
+            });
+            
+            // 显示模态框
+            document.getElementById('bookingModal').classList.add('active');
+            
+            // 绑定表单事件
+            bindFormEvents();
+        }
+
+        // 绑定表单事件
+        function bindFormEvents() {
+            const serviceSelect = document.getElementById('serviceSelect');
+            const staffSelect = document.getElementById('staffSelect');
+            const durationSelect = document.getElementById('durationSelect');
+            
+            // 移除可能存在的重复事件监听器
+            serviceSelect.removeEventListener('change', updateEstimatedPrice);
+            staffSelect.removeEventListener('change', updateEstimatedPrice);
+            durationSelect.removeEventListener('change', updateEstimatedPrice);
+            
+            // 添加新的事件监听器
+            serviceSelect.addEventListener('change', updateEstimatedPrice);
+            staffSelect.addEventListener('change', updateEstimatedPrice);
+            durationSelect.addEventListener('change', updateEstimatedPrice);
+            
+            // 初始计算价格
+            updateEstimatedPrice();
+        }
+
+        // 更新预计价格
+        function updateEstimatedPrice() {
+            const serviceId = parseInt(document.getElementById('serviceSelect').value);
+            const staffId = parseInt(document.getElementById('staffSelect').value);
+            const duration = parseInt(document.getElementById('durationSelect').value);
+            
+            if (!serviceId || !staffId || !duration) {
+                document.getElementById('estimatedPrice').textContent = '¥0';
+                return;
+            }
+            
+            const service = servicesData.find(s => s.id === serviceId);
+            const staff = staffData.find(s => s.id === staffId);
+            
+            if (service && staff) {
+                let basePrice = service.price;
+                
+                // 应用人员价格系数
+                basePrice = basePrice * staff.priceMultiplier;
+                
+                // 应用时长系数
+                const totalPrice = basePrice * duration;
+                
+                // 特殊规则：首席服务师最低消费
+                if (staff.rank === "#1" && totalPrice < 500) {
+                    document.getElementById('estimatedPrice').textContent = '¥500起';
+                } else {
+                    document.getElementById('estimatedPrice').textContent = `¥${Math.round(totalPrice)}`;
+                }
+            }
+        }
+
+        // 提交预约
+        function submitBooking(event) {
+            event.preventDefault();
+            
+            const serviceId = parseInt(document.getElementById('serviceSelect').value);
+            const staffId = parseInt(document.getElementById('staffSelect').value);
+            const duration = parseInt(document.getElementById('durationSelect').value);
+            const bookingDate = document.getElementById('bookingDate').value;
+            const bookingTime = document.getElementById('bookingTime').value;
+            const customerName = document.getElementById('customerName').value;
+            const customerPhone = document.getElementById('customerPhone').value;
+            const specialRequirements = document.getElementById('specialRequirements').value;
+            
+            // 验证表单
+            if (!serviceId || !staffId || !duration || !bookingDate || !bookingTime || !customerName || !customerPhone) {
+                showNotification('请填写完整的预约信息', 'error');
+                return;
+            }
+            
+            // 显示加载状态
+            const submitBtn = document.querySelector('#bookingForm button[type="submit"]');
+            const submitBtnText = document.getElementById('submitBtnText');
+            const submitLoading = document.getElementById('submitLoading');
+            
+            submitBtnText.style.display = 'none';
+            submitLoading.style.display = 'inline-block';
+            submitBtn.disabled = true;
+            
+            // 模拟API调用延迟
+            setTimeout(() => {
+                // 创建预约记录
+                const booking = {
+                    id: 'BK' + Date.now(),
+                    serviceId: serviceId,
+                    staffId: staffId,
+                    duration: duration,
+                    bookingDate: bookingDate,
+                    bookingTime: bookingTime,
+                    customerName: customerName,
+                    customerPhone: customerPhone,
+                    specialRequirements: specialRequirements,
+                    status: 'pending',
+                    createdAt: new Date().toISOString()
+                };
+                
+                // 保存到本地存储
+                const bookings = JSON.parse(localStorage.getItem('serviceBookings') || '[]');
+                bookings.push(booking);
+                localStorage.setItem('serviceBookings', JSON.stringify(bookings));
+                
+                // 显示成功通知
+                showNotification(`预约成功！预约编号：${booking.id}，客服将在24小时内联系您确认。`, 'success');
+                
+                // 关闭模态框
+                closeBookingModal();
+                
+                // 清空表单
+                document.getElementById('bookingForm').reset();
+                
+                // 更新预约数量
+                updateBookingCount();
+                
+                // 恢复按钮状态
+                submitBtnText.style.display = 'inline-block';
+                submitLoading.style.display = 'none';
+                submitBtn.disabled = false;
+                
+                // 如果正在查看预约页面，刷新显示
+                if (document.getElementById('bookings').classList.contains('active')) {
+                    renderBookings();
+                }
+            }, 1000);
+        }
+
+        // 关闭模态框
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            if (modal) {
+                modal.classList.remove('active');
+            }
+            
+            // 重置表单
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm) {
+                bookingForm.reset();
+            }
+            
+            // 重新加载原始表单
+            const modalTitle = document.getElementById('modalTitle');
+            if (modalTitle) {
+                modalTitle.textContent = '预约服务';
+            }
+        }
+
+        // 显示通知
+        function showNotification(message, type = 'info') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.style.display = 'block';
+            
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // 选项卡切换
+        function openTab(tabName, event) {
+            // 移除所有active类
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // 添加active类到目标选项卡
+            document.getElementById(tabName).classList.add('active');
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
+            
+            // 如果是预约页面，渲染预约记录
+            if (tabName === 'bookings') {
+                renderBookings();
+            }
+        }
+
+        // 渲染预约记录
+        function renderBookings() {
+            const bookingsContent = document.getElementById('bookingsContent');
+            const bookings = JSON.parse(localStorage.getItem('serviceBookings') || '[]');
+            
+            if (bookings.length === 0) {
+                bookingsContent.innerHTML = `
+                    <p style="color: #64748b; margin-bottom: 20px;">您还没有任何预约记录</p>
+                    <button class="btn btn-primary" onclick="openTab('staff')">
+                        <i class="ti ti-calendar-plus"></i> 立即预约
+                    </button>
+                `;
+                return;
+            }
+            
+            let html = '<div style="max-height: 600px; overflow-y: auto;">';
+            
+            bookings.forEach(booking => {
+                const service = servicesData.find(s => s.id === booking.serviceId);
+                const staff = staffData.find(s => s.id === booking.staffId);
+                
+                if (!service || !staff) return;
+                
+                const statusClass = `booking-status ${booking.status}`;
+                const statusText = {
+                    'pending': '待确认',
+                    'confirmed': '已确认',
+                    'cancelled': '已取消'
+                }[booking.status] || '未知';
+                
+                html += `
+                    <div class="booking-item">
+                        <div class="booking-header">
+                            <div class="booking-id">预约编号: ${booking.id}</div>
+                            <div class="${statusClass}">${statusText}</div>
+                        </div>
+                        <div class="booking-details">
+                            <div>服务: ${service.name}</div>
+                            <div>服务师: ${staff.name}</div>
+                            <div>时长: ${booking.duration}小时</div>
+                            <div>时间: ${booking.bookingDate} ${booking.bookingTime}</div>
+                            <div>客户: ${booking.customerName} (${booking.customerPhone})</div>
+                            ${booking.specialRequirements ? `<div>特殊需求: ${booking.specialRequirements}</div>` : ''}
+                        </div>
+                        <div class="booking-actions">
+                            ${booking.status === 'pending' ? `
+                            <button class="btn btn-primary" onclick="confirmBooking('${booking.id}')">确认预约</button>
+                            <button class="btn btn-secondary" onclick="cancelBooking('${booking.id}')">取消预约</button>
+                            ` : ''}
+                            <button class="btn btn-secondary" onclick="viewBookingDetails('${booking.id}')">查看详情</button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            bookingsContent.innerHTML = html;
+        }
+
+        // 确认预约
+        function confirmBooking(bookingId) {
+            const bookings = JSON.parse(localStorage.getItem('serviceBookings') || '[]');
+            const bookingIndex = bookings.findIndex(b => b.id === bookingId);
+            
+            if (bookingIndex === -1) return;
+            
+            bookings[bookingIndex].status = 'confirmed';
+            localStorage.setItem('serviceBookings', JSON.stringify(bookings));
+            
+            showNotification('预约已确认！', 'success');
+            renderBookings();
+        }
+
+        // 取消预约
+        function cancelBooking(bookingId) {
+            const bookings = JSON.parse(localStorage.getItem('serviceBookings') || '[]');
+            const bookingIndex = bookings.findIndex(b => b.id === bookingId);
+            
+            if (bookingIndex === -1) return;
+            
+            bookings[bookingIndex].status = 'cancelled';
+            localStorage.setItem('serviceBookings', JSON.stringify(bookings));
+            
+            showNotification('预约已取消', 'info');
+            renderBookings();
+        }
+
+        // 查看预约详情
+        function viewBookingDetails(bookingId) {
+            const bookings = JSON.parse(localStorage.getItem('serviceBookings') || '[]');
+            const booking = bookings.find(b => b.id === bookingId);
+            
+            if (!booking) return;
+            
+            const service = servicesData.find(s => s.id === booking.serviceId);
+            const staff = staffData.find(s => s.id === booking.staffId);
+            
+            if (!service || !staff) return;
+            
+            const statusText = {
+                'pending': '待确认',
+                'confirmed': '已确认',
+                'cancelled': '已取消'
+            }[booking.status] || '未知';
+            
+            alert(`预约详情：
+预约编号: ${booking.id}
+服务项目: ${service.name}
+服务人员: ${staff.name}
+服务时长: ${booking.duration}小时
+预约时间: ${booking.bookingDate} ${booking.bookingTime}
+客户信息: ${booking.customerName} (${booking.customerPhone})
+特殊需求: ${booking.specialRequirements || '无'}
+预约状态: ${statusText}
+创建时间: ${new Date(booking.createdAt).toLocaleString()}`);
+        }
+
+        // 更新预约数量
+        function updateBookingCount() {
+            const bookings = JSON.parse(localStorage.getItem('serviceBookings') || '[]');
+            document.getElementById('bookingCount').textContent = bookings.length;
+        }
+
+        // 更新预约数量
+        function updateBookingCount() {
+            const bookings = JSON.parse(localStorage.getItem('serviceBookings') || '[]');
+            document.getElementById('bookingCount').textContent = bookings.length;
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            initData();
+            
+            // 绑定表单提交事件
+            document.getElementById('bookingForm').addEventListener('submit', submitBooking);
+            
+            // 修复关闭按钮事件绑定
+            const modalCloseBtn = document.getElementById('modalClose');
+            const cancelBtn = document.getElementById('cancelBtn');
+            
+            if (modalCloseBtn) {
+                modalCloseBtn.addEventListener('click', closeBookingModal);
+            }
+            
+            if (cancelBtn) {
+                cancelBtn.addEventListener('click', closeBookingModal);
+            }
+            
+            // 点击模态框外部关闭
+            const bookingModal = document.getElementById('bookingModal');
+            if (bookingModal) {
+                bookingModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeBookingModal();
+                    }
+                });
+            }
+            
+            // 设置默认日期为今天
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('bookingDate').value = today;
+            
+            // 设置默认时间为下一小时
+            const nextHour = new Date();
+            nextHour.setHours(nextHour.getHours() + 1);
+            const timeString = nextHour.toTimeString().slice(0, 5);
+            document.getElementById('bookingTime').value = timeString;
+        });
+    </script>
+</body>
+</html>
