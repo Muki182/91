@@ -8,8 +8,6 @@ class LazyLoader {
     init() {
         // 监听图片加载
         this.observeImages();
-        // 预加载关键图片
-        this.preloadCriticalImages();
     }
 
     observeImages() {
@@ -38,17 +36,6 @@ class LazyLoader {
         }
     }
 
-    preloadCriticalImages() {
-        // 预加载关键图片（如logo、首屏图片）
-        const criticalImages = [
-            // 可以添加需要预加载的图片URL
-        ];
-
-        criticalImages.forEach(src => {
-            const img = new Image();
-            img.src = src;
-        });
-    }
 }
 
 // 初始化懒加载
