@@ -246,10 +246,16 @@ app.get('/api/stats', (req, res) => {
         totalStaff: data.staff.length,
         totalServices: data.services.length,
         totalBookings: data.bookings.length,
-        pendingBookings: data.bookings.filter(b => b.status === 'pending').length,
-        confirmedBookings: data.bookings.filter(b => b.status === 'confirmed').length,
-        cancelledBookings: data.bookings.filter(b => b.status === 'cancelled').length
+        pendingBookings: 0,
+        confirmedBookings: 0,
+        cancelledBookings: 0
     };
+
+    data.bookings.forEach(b => {
+        if (b.status === 'pending') stats.pendingBookings++;
+        else if (b.status === 'confirmed') stats.confirmedBookings++;
+        else if (b.status === 'cancelled') stats.cancelledBookings++;
+    });
     
     res.json(stats);
 });
